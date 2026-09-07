@@ -50,11 +50,11 @@ export const dict: Dictionary = {
     sub: "Alet çantam — veritabanından deployment'a.",
     cards: [
       [".NET ekosistemi", "C#, Blazor, Razor, Avalonia UI ve WPF — web uygulamalarından native masaüstüne kadar .NET ile."],
-      ["Rust & Web", "Rust'ı adım adım öğreniyorum. TypeScript ve React ise çıraklığımda giderek daha fazla karşıma çıkıyor — aktif olarak geliştiğim bir alan."],
+      ["Systems & Web", "C ve Rust ile daha alt seviyeye iniyorum — saf C ile bir transpiler ve küçük bir standart kütüphane, ayrıca Rust'ta yeniden kullanılabilir bir utility crate. TypeScript ve React ise giderek çıraklığımın bir parçası oluyor."],
       ["AI entegrasyonu", "Kendi yan projelerimde Claude API ile yapay zeka özellikleri — prompt engineering, tool calls, streaming."],
       ["Open Source & Araçlar", "Git, GitHub Actions, Docker ve NuGet publishing. Her gün yeni bir şey öğreniyorum — hem işte hem kendi projelerimle."],
     ],
-    kickers: ["// .NET", "// Web", "// AI", "// OSS"],
+    kickers: ["// .NET", "// systems", "// AI", "// OSS"],
     rows: ["// daily", "// working with", "// currently learning"],
   },
   projects: {
@@ -64,12 +64,6 @@ export const dict: Dictionary = {
     featured: "// öne çıkan",
     all: "Tüm projeler →",
     items: [
-      {
-        tag: "Masaüstü · Open Source",
-        title: "Prowtein",
-        desc: "Minimal native masaüstü beslenme takip uygulaması — yerel, hızlı, hesap gerektirmiyor. Besin kütüphanesi, günlük görünüm, görsel haftalık ilerleme. Tüm veriler makinende SQLite dosyasında saklanır. Claude ile vibe-coded.",
-        metrics: [["< 3 MB", "Binary"], ["SQLite", "Yerel"]],
-      },
       {
         tag: "Open Source · Öne çıkan",
         title: "MudForge",
@@ -87,6 +81,30 @@ export const dict: Dictionary = {
         title: "Discord Bot",
         desc: "C# ile Discord.NET kullanılarak yapılmış Discord botu — slash komutları, event handling ve MongoDB ile kalıcı konfigürasyon. Temiz .NET backend mimarisi pratiği için yan proje.",
         metrics: [["Discord.NET", "Stack"], ["MongoDB", "Storage"]],
+      },
+      {
+        tag: "C · Transpiler · Open Source",
+        title: "C-Extended (cx)",
+        desc: ".cx dosyalarını taşınabilir C koduna çeviren minimal bir transpiler — sınıflar, ilişkili fonksiyonlar ve metotlar; vtable yok, runtime yok, gizli allocation yok. Kalıtım, generic ve exception bilinçli olarak yok: struct artı serbest fonksiyon olarak ifade edilemeyen bir özellik C-Extended'a girmez.",
+        metrics: [["MIT", "Lisans"], ["0", "Runtime deps"]],
+      },
+      {
+        tag: "C · Kütüphane · Open Source",
+        title: "cbase",
+        desc: "Saf C ile yazılan genel projeler için standart kütüphane — dinamik vector, string ve linked list yapıları tek ve temiz bir header API'si arkasında. Makefile, kendi test suite'i ve clangd araçlarıyla kuruldu.",
+        metrics: [["3", "Modül"], ["Pure C", "Bağımsız"]],
+      },
+      {
+        tag: "Rust · Toolkit · Open Source",
+        title: "cope",
+        desc: "Rust için kişisel kopyumum — projelerim arasında tekrar tekrar kullandığım, büyüyen bir yardımcı araç seti. Şu an Serde ile JSON'u tipli struct'lara okuyup yazan ve tipli hatalar döndüren bir config modülü var; logging, ortak error tipleri ve dosya sistemi yardımcıları sırada.",
+        metrics: [["MIT", "Lisans"], ["Serde", "Config"]],
+      },
+      {
+        tag: "Rust · Öğrenme · Open Source",
+        title: "rust-mini-games",
+        desc: "Rust öğrenirken yazdığım üç küçük terminal oyunu — Guess the Word, Number Guess ve Tic-Tac-Toe. Ownership, pattern matching ve error handling'i gerçekten çalışan bir şey üzerinde pratik ettim.",
+        metrics: [["3", "Oyun"], ["CLI", "Terminal"]],
       },
     ],
   },

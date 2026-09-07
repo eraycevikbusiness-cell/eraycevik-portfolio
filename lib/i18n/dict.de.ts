@@ -95,11 +95,11 @@ export const dict: Dictionary = {
     sub: "Mein Werkzeugkasten — von der Datenbank bis zum Deployment.",
     cards: [
       [".NET Ökosystem", "C#, Blazor, Razor, Avalonia UI und WPF — von Web-Apps bis zu nativen Desktop-Applikationen mit dem .NET-Stack."],
-      ["Rust & Web", "Rust lerne ich gerade und arbeite mich Schritt für Schritt ein. TypeScript und React begegnen mir zunehmend in der Ausbildung — ein Bereich, in dem ich aktiv wachse."],
+      ["Systems & Web", "Mit C und Rust gehe ich runter auf die tiefere Ebene — ein Transpiler und eine kleine Standard-Library in reinem C, dazu eine wiederverwendbare Utility-Crate in Rust. TypeScript und React begegnen mir zunehmend in der Ausbildung."],
       ["KI-Integration", "Claude API für KI-Features in eigenen Side-Projects — Prompt-Engineering, Tool-Calls, Streaming."],
       ["Open Source & Tooling", "Git, GitHub Actions, Docker und NuGet-Publishing. Ich lerne täglich Neues — in der Ausbildung und durch eigene Projekte."],
     ],
-    kickers: ["// .NET", "// Web", "// AI", "// OSS"],
+    kickers: ["// .NET", "// systems", "// AI", "// OSS"],
     rows: ["// daily", "// working with", "// currently learning"],
   },
   projects: {
@@ -109,12 +109,6 @@ export const dict: Dictionary = {
     featured: "// featured",
     all: "Alle Projekte →",
     items: [
-      {
-        tag: "Desktop · Open Source",
-        title: "Prowtein",
-        desc: "Minimaler nativer Desktop-Ernährungstracker — lokal, schnell, kein Konto. Lebensmittelbibliothek, Tagesansicht, visuelle Wochenfortschritte. Alle Daten bleiben eine SQLite-Datei auf deinem Rechner. Mit Claude vibe-coded.",
-        metrics: [["< 3 MB", "Binary"], ["SQLite", "Lokal"]],
-      },
       {
         tag: "Open Source · Featured",
         title: "MudForge",
@@ -132,6 +126,30 @@ export const dict: Dictionary = {
         title: "Discord Bot",
         desc: "Discord-Bot mit Discord.NET in C# gebaut — Slash-Commands, Event-Handling und persistente Konfiguration über MongoDB. Eigenes Side-Project zum Üben sauberer .NET-Backend-Architektur.",
         metrics: [["Discord.NET", "Stack"], ["MongoDB", "Storage"]],
+      },
+      {
+        tag: "C · Transpiler · Open Source",
+        title: "C-Extended (cx)",
+        desc: "Ein minimaler Transpiler, der .cx-Dateien in portables C übersetzt — Klassen, assoziierte Funktionen und Methoden, ohne vtables, ohne Runtime und ohne versteckte Allokationen. Bewusst ohne Vererbung, Generics oder Exceptions: Was sich nicht als Struct plus freie Funktion ausdrücken lässt, gehört nicht in C-Extended.",
+        metrics: [["MIT", "Lizenz"], ["0", "Runtime-Deps"]],
+      },
+      {
+        tag: "C · Library · Open Source",
+        title: "cbase",
+        desc: "Standard-Library für generische Projekte in reinem C — dynamische Vectors, Strings und Linked Lists hinter einer sauberen Header-API. Gebaut mit Makefile, eigener Test-Suite und clangd-Tooling.",
+        metrics: [["3", "Module"], ["Pure C", "Ohne Deps"]],
+      },
+      {
+        tag: "Rust · Toolkit · Open Source",
+        title: "cope",
+        desc: "Mein persönliches Kopium für Rust — eine wachsende Sammlung von Utilities, die ich projektübergreifend wiederverwende. Aktuell ein Config-Modul, das JSON über Serde in typisierte Structs liest und schreibt, inklusive typisierter Fehler. Logging, geteilte Error-Types und Filesystem-Helper folgen.",
+        metrics: [["MIT", "Lizenz"], ["Serde", "Config"]],
+      },
+      {
+        tag: "Rust · Learning · Open Source",
+        title: "rust-mini-games",
+        desc: "Drei kleine Terminal-Spiele — Guess the Word, Number Guess und Tic-Tac-Toe — entstanden beim Rust-Lernen. Ownership, Pattern Matching und Error Handling an etwas geübt, das am Ende wirklich läuft.",
+        metrics: [["3", "Spiele"], ["CLI", "Terminal"]],
       },
     ],
   },

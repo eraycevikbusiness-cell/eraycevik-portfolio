@@ -50,11 +50,11 @@ export const dict: Dictionary = {
     sub: "My toolbox — from database to deployment.",
     cards: [
       [".NET ecosystem", "C#, Blazor, Razor, Avalonia UI and WPF — from web apps to native desktop apps with the .NET stack."],
-      ["Rust & Web", "Currently learning Rust, working my way through it step by step. TypeScript and React are increasingly part of my apprenticeship — an area I'm actively growing in."],
+      ["Systems & Web", "C and Rust are where I go low-level — a transpiler and a small standard library in pure C, plus a reusable utility crate in Rust. TypeScript and React are increasingly part of my apprenticeship."],
       ["AI integration", "Claude API for AI features in my own side projects — prompt engineering, tool calls, streaming."],
       ["Open Source & Tooling", "Git, GitHub Actions, Docker and NuGet publishing. Always learning — both at work and through my own projects."],
     ],
-    kickers: ["// .NET", "// Web", "// AI", "// OSS"],
+    kickers: ["// .NET", "// systems", "// AI", "// OSS"],
     rows: ["// daily", "// working with", "// currently learning"],
   },
   projects: {
@@ -64,12 +64,6 @@ export const dict: Dictionary = {
     featured: "// featured",
     all: "All projects →",
     items: [
-      {
-        tag: "Desktop · Open Source",
-        title: "Prowtein",
-        desc: "Minimal native desktop nutrition tracker — local, fast, no account needed. Food library, daily view, visual weekly progress. All data stays in a SQLite file on your machine. Vibe-coded with Claude.",
-        metrics: [["< 3 MB", "Binary"], ["SQLite", "Local"]],
-      },
       {
         tag: "Open Source · Featured",
         title: "MudForge",
@@ -87,6 +81,30 @@ export const dict: Dictionary = {
         title: "Discord Bot",
         desc: "Discord bot built with Discord.NET in C# — slash commands, event handling and persistent configuration via MongoDB. Side project to practice clean .NET backend architecture.",
         metrics: [["Discord.NET", "Stack"], ["MongoDB", "Storage"]],
+      },
+      {
+        tag: "C · Transpiler · Open Source",
+        title: "C-Extended (cx)",
+        desc: "A minimal transpiler that compiles .cx files down to portable C — classes, associated functions and methods, with no vtables, no runtime and no hidden allocations. Deliberately without inheritance, generics or exceptions: if a feature can't be expressed as a struct plus a free function, it doesn't belong in C-Extended.",
+        metrics: [["MIT", "License"], ["0", "Runtime deps"]],
+      },
+      {
+        tag: "C · Library · Open Source",
+        title: "cbase",
+        desc: "Standard library for generic projects in pure C — dynamic vectors, strings and linked lists behind one clean header API. Built with a Makefile, its own test suite and clangd tooling.",
+        metrics: [["3", "Modules"], ["Pure C", "No deps"]],
+      },
+      {
+        tag: "Rust · Toolkit · Open Source",
+        title: "cope",
+        desc: "My personal copium for Rust — a growing toolkit of utilities I reuse across projects. Currently a config module that reads and writes JSON into typed structs via Serde, with typed errors. Logging, shared error types and filesystem helpers are next.",
+        metrics: [["MIT", "License"], ["Serde", "Config"]],
+      },
+      {
+        tag: "Rust · Learning · Open Source",
+        title: "rust-mini-games",
+        desc: "Three small terminal games — Guess the Word, Number Guess and Tic-Tac-Toe — written while learning Rust. Ownership, pattern matching and error handling practised on something that actually runs.",
+        metrics: [["3", "Games"], ["CLI", "Terminal"]],
       },
     ],
   },

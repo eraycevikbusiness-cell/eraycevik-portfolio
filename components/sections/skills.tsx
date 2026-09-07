@@ -10,6 +10,10 @@ const TECH: Record<string, { slug: string; color: string }> = {
   "Blazor":           { slug: "blazor",             color: "#5C2D91" },
   "Avalonia":         { slug: "avaloniaui",         color: "#A579FF" },
   "Rust":             { slug: "rust",               color: "#DEA584" },
+  "Cargo":            { slug: "rust",               color: "#DEA584" },
+  "C":                { slug: "c",                  color: "#A8B9CC" },
+  "Make":             { slug: "make",               color: "#6D00CC" },
+  "LLVM":             { slug: "llvm",               color: "var(--ek-fg)" },
   "WPF":              { slug: "dotnet",             color: "#5C2D91" },
   "ASP.NET Core":     { slug: "dotnet",             color: "#512BD4" },
   "Razor":            { slug: "dotnet",             color: "#512BD4" },
@@ -89,8 +93,8 @@ function TechIcon({ name, size = 14 }: { name: string; size?: number }) {
    Row 2: currently learning — actively growing into. */
 const stackRows = [
   ["C#", ".NET Framework", "Blazor", "Razor", "ASP.NET Core", "Entity Framework", "NuGet", "Git", "GitHub", "SQL Server", "Rider"],
-  ["TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Docker", "GitHub Actions", "Claude AI", "MongoDB", "Canva"],
-  ["Rust", "React", "React Native", "Next.js", "Expo", "Avalonia", "WPF", "Node.js", "SQL"],
+  ["C", "Make", "LLVM", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Docker", "GitHub Actions", "Claude AI", "MongoDB", "Canva"],
+  ["Rust", "Cargo", "React", "React Native", "Next.js", "Expo", "Avalonia", "WPF", "Node.js", "SQL"],
 ];
 
 function StackPill({ label }: { label: string }) {
@@ -351,7 +355,7 @@ export function SkillsSection() {
         <BentoCard
           className="md:col-span-3"
           title={t.cards[1][0]} desc={t.cards[1][1]}
-          badges={["Rust", "TypeScript", "React"]}
+          badges={["C", "Rust", "TypeScript", "React"]}
           accentClass="text-accent-fuchsia" kicker={t.kickers[1]}
           visual={<RustVisual />}
         />

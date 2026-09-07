@@ -14,10 +14,13 @@ type ProjectMeta = {
 };
 
 const projectsMeta: ProjectMeta[] = [
-  { chips: ["Desktop App", "SQLite", "macOS", "Windows", "Linux", "Claude AI"],        accent: "from-orange-500/40 via-amber-500/20",   glyph: "PW", featured: true,  href: "https://www.prowtein.app/",            image: "/projects/prowtein.png" },
   { chips: ["C#", ".NET", "Blazor WebAssembly", "MudBlazor", "NuGet", "localStorage"], accent: "from-violet-500/40 via-fuchsia-500/20", glyph: "MF", featured: true,  href: "https://github.com/Eray594/MudForge" },
   { chips: ["C#", ".NET", "SQL Server", "Git", "Agile"],                               accent: "from-cyan-500/30 via-blue-500/10",      glyph: "DG", featured: false, href: "https://www.galaxus.ch/" },
   { chips: ["C#", ".NET", "Discord.NET", "MongoDB", "Slash Commands"],                 accent: "from-indigo-500/35 via-blue-500/15",    glyph: "DB", featured: false, href: "#projects" },
+  { chips: ["C", "Transpiler", "Parser", "Codegen", "Zero Runtime", "MIT"],            accent: "from-slate-400/35 via-zinc-500/15",     glyph: "CX", featured: false, href: "https://github.com/eraycevikbusiness/cx" },
+  { chips: ["C", "Vec", "String", "Linked List", "Makefile", "clangd"],                accent: "from-sky-500/35 via-cyan-500/15",       glyph: "CB", featured: false, href: "https://github.com/eraycevikbusiness/cbase" },
+  { chips: ["Rust", "Cargo", "Serde", "JSON", "Error Types", "MIT"],                   accent: "from-red-500/35 via-orange-500/15",     glyph: "CO", featured: false, href: "https://github.com/eraycevikbusiness/cope" },
+  { chips: ["Rust", "CLI", "Cargo", "Pattern Matching"],                               accent: "from-emerald-500/35 via-teal-500/15",   glyph: "RG", featured: false, href: "https://github.com/eraycevikbusiness/rust-mini-games" },
 ];
 
 function ProjectCard({ p, index }: { p: ReturnType<typeof useT>["projects"]["items"][0] & ProjectMeta; index: number }) {
@@ -131,7 +134,7 @@ export function ProjectsSection() {
 
       <div className="mb-10 flex items-center justify-between">
         <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/45">{t.featured}</span>
-        <a href="#contact" className="ulink font-mono text-[11px] uppercase tracking-[0.2em] text-white/70">{t.all}</a>
+        <a href="https://github.com/eraycevikbusiness" target="_blank" rel="noreferrer" className="ulink font-mono text-[11px] uppercase tracking-[0.2em] text-white/70">{t.all}</a>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
