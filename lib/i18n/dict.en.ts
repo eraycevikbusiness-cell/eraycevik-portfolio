@@ -36,6 +36,7 @@ export const dict: Dictionary = {
     p2_proj: "MudForge",
     p2_post: " — an MIT-licensed NuGet library that simplifies theming in Blazor apps with MudBlazor.",
     p3: "I love solving problems that make other developers' lives easier. .NET, Blazor or web — clean code and good developer experience matter more to me than quick fixes.",
+    photoAlt: "Eray Kaan Cevik",
     stats: [
       ["19", "years old", "born 2007"],
       ["EFZ", "IT Apprentice", "Switzerland · 2023→"],

@@ -21,6 +21,7 @@ export type Dictionary = {
     p1_pre: string; p1_name: string; p1_mid: string; p1_org: string; p1_post: string;
     p2_pre: string; p2_age: string; p2_mid: string; p2_proj: string; p2_post: string;
     p3: string;
+    photoAlt: string;
     stats: [string, string, string][];
   };
   stack: {
@@ -81,6 +82,7 @@ export const dict: Dictionary = {
     p2_proj: "MudForge",
     p2_post: " — eine MIT-lizenzierte NuGet-Library, die das Theming in Blazor-Apps mit MudBlazor vereinfacht.",
     p3: "Ich liebe es, Probleme zu lösen, die anderen Entwicklern das Leben einfacher machen. Egal ob .NET, Blazor oder Web — sauberer Code und gute Developer Experience sind mir wichtiger als schnelle Lösungen.",
+    photoAlt: "Eray Kaan Cevik",
     stats: [
       ["19", "Jahre alt", "born 2007"],
       ["EFZ", "Informatiker", "Schweiz · 2023→"],

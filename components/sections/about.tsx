@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useT } from "@/lib/i18n";
 
 const tags = ["C#", "Rust", "Blazor", "Razor", "Avalonia UI", "WPF", "Claude AI", "TypeScript"];
@@ -78,8 +79,31 @@ export function AboutSection() {
           </div>
         </div>
 
-        {/* Stats grid */}
-        <div className="md:col-span-5">
+        {/* Portrait + stats grid */}
+        <div className="md:col-span-5 space-y-3">
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.7, ease: [0.2, 0.7, 0.2, 1] }}
+            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-100/60"
+          >
+            <div className="relative aspect-4/5 w-full">
+              <Image
+                src="/eray.jpg"
+                alt={a.photoAlt}
+                fill
+                sizes="(min-width: 768px) 40vw, 100vw"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+            </div>
+            <div className="pointer-events-none absolute bottom-4 left-5 flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-accent-violet/80" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/75">{a.photoAlt}</span>
+            </div>
+          </motion.div>
+
           <div className="grid grid-cols-2 gap-3">
             {a.stats.map((s, i) => (
               <motion.div
